@@ -1,4 +1,4 @@
-import Homepage from "./Homepage";
-import Mens from "./Mens";
+import MenuItem from "./MenuItem/MenuItem";
+import Directory from "./directory/directory.component";
 
-export { Homepage, Mens };
+export { MenuItem, Directory };
