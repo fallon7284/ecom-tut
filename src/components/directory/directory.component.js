@@ -8,24 +8,31 @@ export default class Directory extends React.Component {
     this.state = {
       sections: [
         {
-          title: "Hats",
-          imageUrl: `http://www.robohash.org/${Math.floor(Math.random() * 25)}`
+          title: "hats",
+          imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
+          id: 1
         },
         {
-          title: "Jackets",
-          imageUrl: `http://www.robohash.org/${Math.floor(Math.random() * 25)}`
+          title: "jackets",
+          imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
+          id: 2
         },
         {
-          title: "Sneakers",
-          imageUrl: `http://www.robohash.org/${Math.floor(Math.random() * 25)}`
+          title: "sneakers",
+          imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
+          id: 3
         },
         {
-          title: "Mens",
-          imageUrl: `http://www.robohash.org/${Math.floor(Math.random() * 25)}`
+          title: "womens",
+          imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
+          size: "large",
+          id: 4
         },
         {
-          title: "Womens",
-          imageUrl: `http://www.robohash.org/${Math.floor(Math.random() * 25)}`
+          title: "mens",
+          imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
+          size: "large",
+          id: 5
         }
       ]
     };
@@ -34,8 +41,10 @@ export default class Directory extends React.Component {
   render() {
     return (
       <div className="directory-menu">
-        {this.state.sections.map(({ title, imageUrl, key }) => {
-          return <MenuItem key={key} title={title} />;
+        {this.state.sections.map(({ title, imageUrl, id, size }) => {
+          return (
+            <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
+          );
         })}
       </div>
     );
